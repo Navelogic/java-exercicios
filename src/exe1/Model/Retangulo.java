@@ -1,4 +1,4 @@
-package Model;
+package exe1.Model;
 
 public class Retangulo {
     public double h;
