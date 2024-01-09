@@ -1,3 +1,5 @@
+package exe1;
+
 import exe1.Model.Retangulo;
 
 import java.util.Locale;
