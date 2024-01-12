@@ -13,3 +13,6 @@ Este repositório é destinado à prática e ao teste de conhecimentos em Java.
 ### Exercício 3:
 - [Código fonte](https://github.com/Navelogic/java-exercicios/tree/main/src/exe3)
 ![image](https://github.com/Navelogic/java-exercicios/assets/93350805/72e1fbfa-b301-4153-ad0e-8ff5f8b7e02d)
+### Exercício 4:
+- [Código fonte](https://github.com/Navelogic/java-exercicios/tree/main/src/exe4)
+![image](https://github.com/Navelogic/java-exercicios/assets/93350805/49a18b73-651b-435c-a9aa-9873b672aea9)
