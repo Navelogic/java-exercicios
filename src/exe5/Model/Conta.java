@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Conta {
     Banco bc = new Banco();
     private String titular;
+    public boolean negativado = false;
     private int idConta;
     private double totalEmConta = 0;
     private ArrayList<Transacao> extrato = new ArrayList<>();
@@ -85,23 +86,47 @@ public class Conta {
     // Função para ID
     private void funcaoID(){
         idConta = bc.getTotalContasRegistradas() + 1;
-        bc.setTotalContasRegistradas(idConta);
+        bc.totalContasRegistradas = idConta;
     }
 
     // Função para Depósito
     public void deposito(double deposito){
-        totalEmConta = totalEmConta + deposito;
-    }
-    // Função para Saque
-    public void saque(double saque){
-        totalEmConta = totalEmConta - saque - 5;
+        totalEmConta += deposito;
+        registrarTransacao("Depósito", deposito);
     }
 
-    //To String
+    // Função para Saque
+    public void saque(double saque) {
+        if (totalEmConta >= saque + 5) {
+            totalEmConta -= (saque + 5);
+            registrarTransacao("Saque", -saque - 5);
+        } else {
+            negativado = true;
+            System.out.println("Saldo insuficiente para realizar o saque.");
+        }
+    }
+
+    // Função para registrar transações
+    private void registrarTransacao(String tipo, double valor) {
+        Transacao transacao = new Transacao(tipo.equals("Depósito"), valor);
+        extrato.add(transacao);
+    }
+
+    // Exibir extrato
+    public void exibirExtrato() {
+        System.out.println("--- Extrato ---");
+        for (Transacao transacao : extrato) {
+            System.out.println(transacao);
+        }
+        System.out.println("--- Fim do Extrato ---");
+    }
+
+    // To String
     @Override
     public String toString() {
         return  bc
                 + "\n Titular: " + titular
+                + ", Identificação da conta: " + idConta
                 + ", Saldo: R$" + String.format("%.2f",totalEmConta);
     }
 }
