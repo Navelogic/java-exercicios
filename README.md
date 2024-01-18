@@ -29,5 +29,5 @@ Este repositório é destinado à prática e ao teste de conhecimentos em Java.
 - [Código fonte](https://github.com/Navelogic/java-exercicios/tree/main/src/exe8)
 ![image](https://github.com/Navelogic/java-exercicios/assets/93350805/e1251b99-a436-47f3-8fa1-f8a5d9fe03cc)
 ### Exercício 9:
-- [Código fonte](https://github.com/Navelogic/java-exercicios/tree/main/src/exe8)
+- [Código fonte](https://github.com/Navelogic/java-exercicios/tree/main/src/exe9)
 ![image](https://github.com/Navelogic/java-exercicios/assets/93350805/b27934f8-f7c1-4b61-adbe-42b73c97d8b7)
