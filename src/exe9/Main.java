@@ -18,11 +18,30 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Rent r = new Rent("Maria", "maria@gmail.com");
+        Rent[] vect = new Rent[10];
 
-        System.out.println(r);
+        System.out.println("Quantos quartos serão alugados?");
+        int n = sc.nextInt();
 
+        for (int i = 0; i < n; i++){
+            System.out.println("Aluguel #" + (i + 1) + ":");
+            System.out.println("Nome: ");
+            sc.nextLine();
+            String name = sc.nextLine();
+            System.out.println("E-mail: ");
+            String email = sc.next();
+            System.out.println("Quarto: ");
+            int roomNumber = sc.nextInt();
 
+            Rent rent = new Rent(name, email);
+            vect[roomNumber] = rent;
+        }
+        System.out.println("Quartos alugados: ");
+        for (int i = 0; i < 10; i++){
+            if (vect[i] != null){
+                System.out.println("" + i + " " + vect[i]);
+            }
+        }
 
         sc.close();
     }
